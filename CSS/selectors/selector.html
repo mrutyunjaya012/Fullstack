@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector</title>
+    <style>
+        /*universla selector*/
+        *{
+
+        }
+        /*Type selector*/
+        p{
+           font-size: 16px;
+           margin: 10px 20px 10px 20px; 
+        }
+        /* class selector */
+        .highlist{
+            color:brown;
+        }
+        /* Id selector */
+        #para{
+            color: cornflowerblue;
+        }
+        /* Attribute selector */
+        input[type="text"]{
+            border: 50px solid red;
+            border-radius: 10px;
+        }
+        /* Descendant selector */
+        article p{
+            color:aliceblue;
+            background-color: black;
+            padding: 30px;
+        }
+        /* Child selector */
+        ul>li{
+            
+            color:brown;
+        }
+        /* Adjacent Sibling selector */
+        p +h3 {
+            background-color: rgb(235, 229, 229);
+        }
+        /* general Sibling selector */
+        p~h3{
+
+        }
+        /* Pseudo Sibling selector */
+        a:hover{
+            background-color: aqua;
+            text-decoration: none;
+            color: black;
+            padding: 5px;
+            margin: 5px;
+        }
+        /* Pseudo element selector */
+        p::first-letter{
+            font-size: 30px;
+        }
+        /* Grouping selector */
+        h3, h2{
+            background-color: blanchedalmond;
+        }
+
+    </style>
+</head>
+<body>
+    <header>This is header</header>
+    <h2>Main Heading</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic autem omnis harum? Nisi, similique temporibus aliquam harum odio consequuntur necessitatibus sapiente eius blanditiis, quae ipsa.</p>
+
+    <p class="highlist">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic autem omnis harum? Nisi, similique temporibus aliquam harum odio consequuntur necessitatibus sapiente eius blanditiis, quae ipsa.</p>
+
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic autem omnis harum? Nisi, similique temporibus aliquam harum odio consequuntur necessitatibus sapiente eius blanditiis, quae ipsa.</p>
+
+    <input type="text " placeholder="enter value">
+
+    <article>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus vel voluptas numquam doloremque mollitia exercitationem eum quasi optio alias provident est ex, accusantium illo, libero repellendus, ipsam velit sapiente vitae!</p>
+
+        <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, nam!</h3>
+    </article>
+    <ul>
+        <li>good</li>
+        <li>bad</li>
+        <li>
+            <ul>
+                <li>hii </li>
+                <li>hello</li>
+            </ul>
+        </li>
+    </ul>
+
+    <a href="www.google.com"> click here </a>
+</body>
+</html>

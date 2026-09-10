@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #212121;
+            color:aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName){
+    const parent=document.querySelector(".language"); // select parent element 
+    const list=document.createElement("li"); //create a list element
+    
+    list.innerHTML=`${langName}`; // add text
+    list.style.backgroundColor="green"; //set background
+    parent.appendChild(list) // append it into parent 
+
+    }
+
+    addLanguage("python");
+    addLanguage("Java");
+    addLanguage("c++");
+    
+    // But this is not a optimized approach becuase when we call the fucntion it traverse the whole tree becuase of innerHTML so just try to avoid this  instead of this try this approach 
+
+    function addOptimisedLanguage(langName){
+        const list= document.createElement('li');
+        list.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(list)
+    }
+
+    addOptimisedLanguage("C")
+    addOptimisedLanguage("PHP")
+
+    //edit
+
+    const secondLang=document.querySelector("li:nth-child(2)")
+    // secondLang.innerHTML="hello"  don't use this 
+
+    const list = document.createElement('li')
+    list.textContent="golang"
+    list.style.backgroundColor="pink"
+    secondLang.replaceWith(list)
+
+    //edit 
+
+    const FirstLang= document.querySelector("li:first-child")
+    FirstLang.outerHTML='<li>Typescript'
+
+    //remove
+
+    const lastLang=document.querySelector("li:last-child")
+    lastLang.remove()
+
+    
+</script>
+</html>
